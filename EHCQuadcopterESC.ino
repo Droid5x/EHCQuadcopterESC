@@ -1,5 +1,5 @@
 // Copyright RPI Embedded Hardware Club 2014
-// Authors: Mark Blanco and Alex Buchholz
+// Authors: Mark Blanco and Alex Buchholz and Frank Sokolowski
 // 10/20/2014
 
 int potentiometer = 7;
