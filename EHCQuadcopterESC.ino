@@ -10,6 +10,7 @@ int pin_5 = 5;
 int pin_6 = 6;
 int pin_7 = 7;
 float delay_value = 5;
+float proportion = 0.00488759*1000;
 
 //odd numbers are NChannels substituting PChannels
 
@@ -22,30 +23,30 @@ void setup(){
 }
 
 void loop(){
-  delay_value = ( float(analogRead(potentiometer)) * 0.00488759 );
+  delay_value = ( float(analogRead(potentiometer)) * proportion );
   Serial.println(delay_value);
   digitalWrite(7,HIGH);
   digitalWrite(5,LOW);
-  delay(delay_value);
-  delay_value = ( float(analogRead(potentiometer)) * 0.00488759 );
+  delayMicroseconds(delay_value);
+  delay_value = ( float(analogRead(potentiometer)) * proportion );
   digitalWrite(4,HIGH);
   digitalWrite(2,LOW);
-  delay(delay_value);
-  delay_value = ( float(analogRead(potentiometer)) * 0.00488759 );
+  delayMicroseconds(delay_value);
+  delay_value = ( float(analogRead(potentiometer)) * proportion );
   digitalWrite(3,HIGH);
   digitalWrite(7,LOW);
-  delay(delay_value);
-  delay_value = ( float(analogRead(potentiometer)) * 0.00488759 );
+  delayMicroseconds(delay_value);
+  delay_value = ( float(analogRead(potentiometer)) * proportion );
   digitalWrite(6,HIGH);
   digitalWrite(4,LOW);
-  delay(delay_value);
-  delay_value = ( float(analogRead(potentiometer)) * 0.00488759 );
+  delayMicroseconds(delay_value);
+  delay_value = ( float(analogRead(potentiometer)) * proportion );
   digitalWrite(5,HIGH);
   digitalWrite(3,LOW);
-  delay(delay_value);
-  delay_value = ( float(analogRead(potentiometer)) * 0.00488759 );
+  delayMicroseconds(delay_value);
+  delay_value = ( float(analogRead(potentiometer)) * proportion );
   digitalWrite(2,HIGH);
   digitalWrite(6,LOW);
-  delay(delay_value);
+  delayMicroseconds(delay_value);
 }
 
